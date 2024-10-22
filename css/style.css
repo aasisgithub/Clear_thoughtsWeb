@@ -1,0 +1,565 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Section */
+nav.navbar {
+    background-color: #649CB4; /* Navbar background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    position: fixed; /* Makes the navbar fixed */
+    top: 0; /* Sticks it to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Keeps it above other elements */
+}
+
+
+.logo-section {
+    display: flex;
+    align-items: center;
+   
+}
+
+.logo-image {
+    width: 180px; /* Increased image size */
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+    transform: translateY(-10px);
+}
+
+
+
+/* Separate section for navbar buttons */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    margin: 0;
+    padding: 0 80px;
+}
+
+.nav-links li {
+    margin-left: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+   
+}
+
+.nav-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Contact Us Button in Navbar */
+.btn-contact {
+    background-color: #C99E51;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    transform: translatex(-10px);
+}
+
+.btn-contact:hover {
+    background-color: #b08446;
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 95vh;
+    background-image: url('https://i.pinimg.com/originals/da/f8/1e/daf81efcde91b79bfb4d95a8cb0502be.gif');
+    background-size: fill;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    margin-top: 70px;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.input {
+    font-size: 38px;
+    font-weight: bold;
+    color: #fdd835;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* Moved the button slightly downward */
+.app_button{
+   transform: translateY(60px);
+}
+.hero-content .btn-primary {
+    background-color: #C99E51;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+   
+}
+
+.btn-primary:hover {
+    background-color: #fdd835;
+    color: black;
+    border-radius: 10px;
+}
+
+/* Info Boxes Section */
+
+.info-boxes {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 30px;
+    align-items: center;
+}
+
+.info-box {
+    position: relative;
+    width: 30vh;
+    height: 25vh;
+    perspective: 1000px; /* Enables 3D space for the flip effect */
+    cursor: pointer; /* Shows a pointer cursor on hover */
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back when facing away */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.front {
+    background-color: #649CB4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50px;
+    transition: transform 0.6s; /* Animation duration */
+}
+
+.back {
+    background-color: #649CB4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: rotateY(180deg); /* Starts flipped */
+    border-radius: 50px;
+    transition: transform 0.9s; /* Animation duration */
+}
+
+.info-box:hover .front {
+    transform: rotateY(180deg); /* Flips the front */
+}
+
+.info-box:hover .back {
+    transform: rotateY(0); /* Shows the back */
+}
+
+.info-icon {
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
+    margin-bottom: 0px;
+}
+
+.info-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 16px;
+}
+
+/* About Us Section */
+#about {
+    padding: 60px 30px;
+    background-color: #f0f0f0;
+}
+
+#about h2 {
+    font-size: 36px;
+    text-align: center;
+    
+}
+
+#about p {
+    text-align: center;
+    font-size: 18px;
+
+    
+}
+
+
+/* Services Section */
+.services-section {
+    background-color: #649CB4;
+    padding: 50px 30px;
+    color: white;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+
+.services-section h3 {
+    font-size: 20px;
+    color: #ffeb3b;
+    margin: 5px 0px;
+}
+
+.service-boxes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap; /* This will ensure the boxes wrap when the screen gets smaller */
+}
+
+.service-box {
+    background-color: white;
+    width: 50vh;
+    height: 50vh;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-decoration: none; /* Ensures no underline */
+}
+
+.service-box a {
+    text-decoration: none; /* Removes underline from clickable boxes */
+    color: inherit; /* Inherit text color to avoid default link color */
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-box .icon {
+    margin: 10px 0px;
+    object-fit: fill;
+}
+
+.service-box .icon img {
+    width: 70px;
+    height: 70px;
+}
+
+.service-box h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 16px;
+}
+
+/* Add responsiveness for smaller devices */
+@media (max-width: 768px) {
+    .service-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%; /* Adjust width to fit smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* Discover Section */
+/* Discover Section */
+.discover-section {
+    background-color: white;
+    padding: 60px 30px;
+    color: #333;
+    position: relative; /* Add this to position the 'More' button */
+    
+}
+
+.discover-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discover-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.btn-more {
+    background-color: #C99E51;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+}
+
+.btn-more:hover {
+    background-color: #b08446;
+}
+
+.discover-header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.discover-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.discover-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.discover-boxes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.discover-box {
+    width: 60vh;
+    height: 80vh;
+    background-color: #649CB4;
+    color: white;
+    padding: 0; /* Remove padding for full-width images */
+    border: 1px solid #ddd; /* Light border for boxes */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.discover-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 10px; /* Rounded corners for the top */
+    border-top-right-radius: 10px; /* Rounded corners for the top */
+}
+
+.discover-box h3 {
+    font-size: 24px;
+    margin: 15px 0; /* Margin for spacing */
+}
+
+.discover-box p {
+    font-size: 16px;
+    margin: 20px 10px; /* Space between paragraph and button */
+}
+
+.btn-read-more {
+    background-color: #C99E51; /* Button color */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-read-more:hover {
+    background-color: #b08446; /* Darker shade on hover */
+}
+
+
+/* FAQ Section */
+.faq-section {
+    padding: 60px 30px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.faq-arrow {
+    font-size: 18px;
+    color: #649CB4;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+}
+
+.faq-answer p {
+    font-size: 16px;
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(90deg, #3D4F60 10%, #649CB4 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffeb3b;
+}
+
+/* Contact Section */
+.footer-column p {
+    margin: 5px 0;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    font-size: 14px;
+}
+

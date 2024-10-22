@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make an Appointment</title> 
+    <link rel="stylesheet" href="/css/appointment.css">
+</head>
+<body>
+    <!-- Header for Navbar -->
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar" id="main-navbar">
+            <div class="logo-section">
+                <img src="/Images/clear1.png" alt="Mental Health Website Logo" class="logo-image">
+            </div>
+            <div class="nav-buttons">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="index.html">Services</a></li>
+                    <li><a href="index.html">Discover</a></li>
+                    <li><a href="index.html">FAQ</a></li>
+                </ul>
+                <a href="#contact" class="btn-contact">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <div class="hello">
+        <!-- Appointment Form Section -->
+        <section class="appointment-section">
+            <h1>Appointment</h1>
+            <h3>Book today, take a step toward better well-being.</h3>
+
+            <form id="appointment-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="contact">Your Contact:</label>
+                <input type="tel" id="contact" name="contact" required>
+
+                <label for="services">Select Services:</label>
+                <select id="services" name="services">
+                    <option value="therapy">Therapy</option>
+                    <option value="consultation">Consultation</option>
+                    <option value="meditation">Meditation</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <div class="button-container">
+                    <button class="clear" type="reset">Clear</button>
+                    <button class="sub" type="submit">Submit</button>
+                </div>
+            </form>
+
+            <div class="opening-hours">
+                <h4>Opening Hours:</h4>
+                <p>Monday - Saturday: 10:00 AM - 9:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </section>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">> Home</a></li>
+                    <li><a href="index.html">> About Us</a></li>
+                    <li><a href="index.html">> Services</a></li>
+                    <li><a href="index.html">> Discover</a></li>
+                    <li><a href="index.html">> FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: clearthougts@gmail.com</p>
+                <p>Phone: +977 9812276928</p>
+                <p>Address: Kalanki, Kathmandu, NEPAL</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="/Images/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img src="/Images/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="/Images/skill-icons_instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mental Health Awareness | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="/Js/appointment.js" defer></script> <!-- Link to external JS -->
+</body>
+</html>
